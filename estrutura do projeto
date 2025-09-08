@@ -1,0 +1,20 @@
+finance-tax-manager/
+│── backend/
+│   ├── app.py                 # API principal (Flask/FastAPI)
+│   ├── models.py              # Modelos ORM (SQLAlchemy)
+│   ├── routes/
+│   │   ├── clients.py
+│   │   ├── transactions.py
+│   │   └── reports.py
+│   └── database.py            # Conexão com banco
+│
+│── frontend/
+│   ├── index.html             # Página inicial
+│   ├── app.js                 # JS principal (fetch API + UI)
+│   ├── styles.css             # Estilo
+│   └── dashboard.js           # Gráficos
+│
+│── database/
+│   └── schema.sql             # Script SQL inicial
+│
+└── README.md
