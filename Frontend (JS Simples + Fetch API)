@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FinanceTax Manager</title>
+</head>
+<body>
+  <h1>Cadastro de Cliente</h1>
+  <input id="nome" placeholder="Nome"/>
+  <input id="cnpj" placeholder="CNPJ"/>
+  <button onclick="addClient()">Salvar</button>
+
+  <script>
+    async function addClient() {
+      let nome = document.getElementById("nome").value;
+      let cnpj = document.getElementById("cnpj").value;
+
+      let response = await fetch("http://127.0.0.1:5000/clients", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name: nome, cnpj: cnpj})
+      });
+
+      let data = await response.json();
+      alert(data.message);
+    }
+  </script>
+</body>
+</html>
